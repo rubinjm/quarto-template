@@ -1,0 +1,86 @@
+---
+title: "Title"
+date:  "`r Sys.Date()`"
+format: 
+  html:
+    self-contained: true
+    number-sections: true
+    fig-width: 22
+    fig-height: 12
+theme: 
+  - styles.scss
+editor: visual
+execute: 
+  echo: false
+  error: false
+  warning: false
+---
+
+```{r}
+suppressPackageStartupMessages({
+  suppressWarnings({
+    library(tidyverse)
+    library(forcats)
+    library(tidyquant)
+    library(ggrepel)
+    library(readxl)
+    library(gtsummary)
+    library(gt)
+    library(ggthemes)
+    library(DataExplorer)
+    library(DT)
+    library(kableExtra)
+    library(ggforce)
+    library(janitor)
+    library(wesanderson)
+    library(thematic)
+    library(hrbrthemes)
+    library(broman) #myround
+    library(showtext)
+    library(skimr)
+    library(plotly)
+    library(colourpicker)
+    if (!require(ggthemes)) install.packages("ggthemes")
+    if (!require(ggcorrplot)) install.packages("ggcorrplot")
+    if (!require(tidymodels)) install.packages("tidymodels")
+  })
+})
+
+
+#Set some basic formatting for the R notebook. 
+options(width = 5000)
+options(digits = 5)
+options(scipen = 999) # No scientific numbers 
+
+
+font_add_google("Roboto Condensed")
+showtext_auto()
+
+theme_custom = theme(
+  text = element_text(family = "Roboto Condensed", size = 24),
+  plot.title = element_text(
+    face = 'bold',
+    # colour = thematic::okabe_ito(8)[6],
+    color = "dark blue",
+    margin = margin (t=2, r=0, b = 2, l = 0, unit = "mm")
+  ),
+)
+theme_set(theme_bw() + theme_custom)
+
+
+data = read_rds("data/data.rds")
+
+#create date range for chart subtitle
+
+subtitle1 = paste(format(min(data$note_filed_date_time),"%m/%d/%y"), format(max(data$note_filed_date_time),"%m/%d/%y"), sep = " - ")
+
+
+subtitle = paste("Includes", subtitle1)
+
+```
+
+```{r}
+
+```
+
+# 
