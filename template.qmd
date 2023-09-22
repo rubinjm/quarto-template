@@ -7,6 +7,8 @@ format:
     number-sections: true
     fig-width: 22
     fig-height: 12
+title-block-banner: "#27445C"
+title-block-banner-color: "white"
 theme: 
   - styles.scss
 editor: visual
