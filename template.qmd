@@ -70,14 +70,13 @@ theme_custom = theme(
 theme_set(theme_bw() + theme_custom)
 
 
-data = read_rds("data/data.rds")
+rm(combined.data)
+rm(data)
 
-#create date range for chart subtitle
-
-subtitle1 = paste(format(min(data$note_filed_date_time),"%m/%d/%y"), format(max(data$note_filed_date_time),"%m/%d/%y"), sep = " - ")
+data = read_rds(here::here("data/data.rds"))
 
 
-subtitle = paste("Includes", subtitle1)
+
 
 ```
 
