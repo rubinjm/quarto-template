@@ -24,7 +24,7 @@ execute:
   warning: false
 ---
 
-{r}
+```{r}
 suppressPackageStartupMessages({
   suppressWarnings({
     library(tidyverse)
@@ -75,5 +75,4 @@ theme_custom = theme(
 )
 theme_set(theme_bw() + theme_custom)
 
-
-
+````
