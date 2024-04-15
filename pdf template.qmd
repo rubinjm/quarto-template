@@ -1,0 +1,79 @@
+---
+#title: "DAX Utilization"
+#date:  "`r Sys.Date()`"
+format: 
+  pdf:
+    number-sections: false
+    papersize: legal
+    classoption: landscape
+    mainfont: "Times New Roman"
+    sansfont: "Arial"
+    monofont: "Courier New"
+    geometry: "left=1cm, right=1cm, top=.5cm, bottom=.5cm"
+    fig-width: 20
+    fig-height: 6
+    #fig-column: page-center
+#title-block-banner: "#27445C"
+#title-block-banner-color: "white"
+#theme: 
+ # - styles.scss
+editor: visual
+execute: 
+  echo: false
+  error: false
+  warning: false
+---
+
+{r}
+suppressPackageStartupMessages({
+  suppressWarnings({
+    library(tidyverse)
+    library(forcats)
+    library(tidyquant)
+    library(ggrepel)
+    library(readxl)
+    library(gtsummary)
+    library(gt)
+    library(ggthemes)
+    library(DataExplorer)
+    library(DT)
+    library(kableExtra)
+    library(ggforce)
+    library(janitor)
+    library(wesanderson)
+    library(thematic)
+    library(hrbrthemes)
+    library(broman) #myround
+    library(showtext)
+    library(skimr)
+    library(plotly)
+    library(colourpicker)
+    if (!require(ggthemes)) install.packages("ggthemes")
+    if (!require(ggcorrplot)) install.packages("ggcorrplot")
+    if (!require(tidymodels)) install.packages("tidymodels")
+  })
+})
+
+
+#Set some basic formatting for the R notebook. 
+#options(width = 5000)
+#options(digits = 5)
+options(scipen = 999) # No scientific numbers 
+
+
+font_add_google("Roboto Condensed")
+showtext_auto()
+
+theme_custom = theme(
+  text = element_text(family = "Roboto Condensed", size = 14),
+  plot.title = element_text(
+    face = 'bold',
+    # colour = thematic::okabe_ito(8)[6],
+    color = "dark blue",
+    margin = margin (t=2, r=0, b = 2, l = 0, unit = "mm")
+  ),
+)
+theme_set(theme_bw() + theme_custom)
+
+
+
