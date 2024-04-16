@@ -1,5 +1,5 @@
 ---
-#title: "DAX Utilization"
+#title: "title"
 #date:  "`r Sys.Date()`"
 format: 
   pdf:
@@ -29,9 +29,7 @@ suppressPackageStartupMessages({
   suppressWarnings({
     library(tidyverse)
     library(forcats)
-    library(tidyquant)
     library(ggrepel)
-    library(readxl)
     library(gtsummary)
     library(gt)
     library(ggthemes)
@@ -75,4 +73,15 @@ theme_custom = theme(
 )
 theme_set(theme_bw() + theme_custom)
 
-````
+
+
+
+
+
+```
+
+```{r}
+
+
+
+```
