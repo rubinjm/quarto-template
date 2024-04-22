@@ -6,17 +6,16 @@ format:
     number-sections: false
     papersize: legal
     classoption: landscape
-    mainfont: "Times New Roman"
-    sansfont: "Arial"
-    monofont: "Courier New"
-    geometry: "left=1cm, right=1cm, top=.5cm, bottom=.5cm"
-    fig-width: 20
-    fig-height: 6
-    #fig-column: page-center
-#title-block-banner: "#27445C"
-#title-block-banner-color: "white"
-#theme: 
- # - styles.scss
+    mainfont: "Helvetica"
+    sansfont: "Helvetica"
+    monofont: "Helvetica"
+    geometry: 
+    - top = 0.5in
+    - bottom = 0.5in
+    - left = 0.5in
+    - right = 0.5in
+    fig-width: 28
+    fig-height: 16
 editor: visual
 execute: 
   echo: false
