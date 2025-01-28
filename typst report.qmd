@@ -1,0 +1,52 @@
+---
+#title: "Ctitle"
+#date:  "`r Sys.Date()`"
+format: 
+  typst:
+    mainfont: "Arial"
+    fig-format: png
+    margin:
+      left: 1cm
+      right: 1cm
+      top: 1cm
+      bottom: 1cm
+editor: visual
+execute: 
+  echo: false
+  error: false
+  warning: false
+---
+
+```{r}
+
+library(tidyverse)
+library(gtsummary)
+library(ggtext)
+library(showtext)
+library(gt)
+library(tidyplots)
+library(glue)
+library(chromote)
+Sys.setenv(CHROMOTE_HEADLESS = "new")
+
+
+
+font_add_google("Roboto Condensed")
+showtext_auto()
+
+theme_custom = theme(
+  text = element_text(family = "Roboto Condensed", size = 16),
+  plot.title = element_text(
+    face = 'bold',
+    # colour = thematic::okabe_ito(8)[6],
+    color = "dark blue",
+    margin = margin (t=2, r=0, b = 4, l = 0, unit = "mm")
+  ),
+)
+theme_set(theme_bw() + theme_custom)
+
+
+
+rm(data, data_cleaned)
+
+data = read_rds(here::here("data/data.rds"))
