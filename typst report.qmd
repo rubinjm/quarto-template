@@ -3,13 +3,10 @@
 #date:  "`r Sys.Date()`"
 format: 
   typst:
-    mainfont: "Arial"
     fig-format: png
-    margin:
-      left: 1cm
-      right: 1cm
-      top: 1cm
-      bottom: 1cm
+    template-partials:
+      - typst-show.typ
+      - typst-template.typ
 editor: visual
 execute: 
   echo: false
