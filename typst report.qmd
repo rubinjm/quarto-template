@@ -30,13 +30,14 @@ Sys.setenv(CHROMOTE_HEADLESS = "new")
 
 font_add_google("Roboto Condensed")
 showtext_auto()
+showtext_opts(dpi=300)
 
 theme_custom = theme(
   text = element_text(family = "Roboto Condensed", size = 16),
   plot.title = element_text(
     face = 'bold',
     # colour = thematic::okabe_ito(8)[6],
-    color = "dark blue",
+    color = "#15397F",
     margin = margin (t=2, r=0, b = 4, l = 0, unit = "mm")
   ),
 )
