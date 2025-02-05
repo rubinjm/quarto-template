@@ -26,6 +26,8 @@
       grid(
         columns: (40%, 60%),
         align(horizon, text(fill: rgb("15397F"), size: 9pt, counter(page).display("1"))),
+        align(right, image("assets/logo.jpg", height: 50%)),
+
       )
     )
   )
