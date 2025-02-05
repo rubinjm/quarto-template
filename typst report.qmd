@@ -48,3 +48,5 @@ theme_set(theme_bw() + theme_custom)
 rm(data, data_cleaned)
 
 data = read_rds(here::here("data/data.rds"))
+
+```
