@@ -24,32 +24,19 @@ execute:
 ---
 
 ```{r}
-suppressPackageStartupMessages({
-  suppressWarnings({
-    library(tidyverse)
-    library(forcats)
-    library(ggrepel)
-    library(gtsummary)
-    library(gt)
-    library(ggthemes)
-    library(DataExplorer)
-    library(DT)
-    library(kableExtra)
-    library(ggforce)
-    library(janitor)
-    library(wesanderson)
-    library(thematic)
-    library(hrbrthemes)
-    library(broman) #myround
-    library(showtext)
-    library(skimr)
-    library(plotly)
-    library(colourpicker)
-    if (!require(ggthemes)) install.packages("ggthemes")
-    if (!require(ggcorrplot)) install.packages("ggcorrplot")
-    if (!require(tidymodels)) install.packages("tidymodels")
-  })
-})
+
+library(tidyverse)
+library(gtsummary)
+library(ggtext)
+library(showtext)
+library(scales)
+library(gt)
+library(tidyplots)
+library(glue)
+library(patchwork)
+library(ggrepel)
+library(chromote)
+Sys.setenv(CHROMOTE_HEADLESS = "new")
 
 
 #Set some basic formatting for the R notebook. 
