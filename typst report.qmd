@@ -24,6 +24,8 @@ library(scales)
 library(gt)
 library(tidyplots)
 library(glue)
+library(patchwork)
+library(ggrepel)
 library(chromote)
 Sys.setenv(CHROMOTE_HEADLESS = "new")
 
