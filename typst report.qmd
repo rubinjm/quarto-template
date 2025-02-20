@@ -3,6 +3,8 @@
 #date:  "`r Sys.Date()`"
 format: 
   typst:
+    fig-width: 14
+    fig-height: 8
     template-partials:
       - typst-show.typ
       - typst-template.typ
